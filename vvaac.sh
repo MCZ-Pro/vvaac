@@ -49,3 +49,5 @@ curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk -c stable
 #update and upgrade
 sudo apt update
 sudo apt upgrade
+ 
+#mouad
