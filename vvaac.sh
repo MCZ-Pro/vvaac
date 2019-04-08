@@ -4,19 +4,19 @@
 #for ubuntu 18.04
 #remove virtual-box if installed
 
-sudo apt install software-properties-common apt-transport-https wget curl
+sudo apt install software-properties-common apt-transport-https wget curl -y
 #
-sudo apt remove virtualbox virtualbox-5.2
+sudo apt remove virtualbox virtualbox-5.2 -y
 #
 # installation virtual-box
 #
-sudo apt update
-sudo apt-get install gcc make linux-headers-$(uname -r) dkms
+sudo apt update -y
+sudo apt-get install gcc make linux-headers-$(uname -r) dkms -y
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian bionic contrib" >> /etc/apt/sources.list.d/virtualbox.list'
-sudo apt update
-sudo apt-get install virtualbox-6.0
+sudo apt update -y
+sudo apt-get install virtualbox-6.0 -y
 #
 #installation vagrant
 #
