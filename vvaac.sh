@@ -1,8 +1,9 @@
-#/bin/bash 
+#/bin/bash
 
 
 #for ubuntu 18.04
 #remove virtual-box if installed
+sudo apt install software-properties-common apt-transport-https wget curl
 
 sudo apt remove virtualbox virtualbox-5.2
 
@@ -20,8 +21,10 @@ sudo apt update
 sudo apt-get install virtualbox-6.0
 
 #installation vagrant
+wget https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.deb
+mv  vagrant_2.2.4_x86_64.deb ~/Téléchargements
+sudo dpkg -i ~/Téléchargements/vagrant_2.2.4_x86_64.deb
 
-sudo apt install vagrant
 
 #installation ansible
 
@@ -36,7 +39,7 @@ sudo apt install ansible
 #wget -q https://packagecloud.io/AtomEditor/atom/gpgkey -O- | sudo apt-key add -
 #sudo add-apt-repository "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main"
 snap install atom --classic
-#installation chefdk 
+#installation chefdk
 
 
 curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk -c stable
